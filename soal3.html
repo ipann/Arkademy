@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 3</title>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+	var bayar = prompt('Anda belanja senilai Rp 21.500. Mau Bayar Berapa? : ' )
+
+	while (bayar < 21500) {
+		bayar = prompt('Uang Yang Anda Masukan Kurang')
+	}
+
+	var kembalian = bayar - 21500;
+	alert('kembalian anda = ' + kembalian)
+
+	var k20000 = 0;
+	var k10000 = 0;
+	var k5000 = 0;
+	var k2000 = 0;
+	var k1000 = 0;
+	var k500 = 0;
+
+	while (kembalian > 20000) {
+		k20000 ++;
+	}
+
+	while (kembalian > 10000) {
+		k10000 ++;
+	}
+
+	while (kembalian > 5000) {
+		k5000 ++;
+	}
+
+	while (kembalian > 2000) {
+		k2000 ++;
+	}
+
+	while (kembalian > 1000) {
+		k1000 ++;
+	}
+
+	while (kembalian > 500) {
+		k500 ++;
+	}
+
+	var total_kembalian = (20000*k20000)+(10000*k10000)+(5000*k5000)+(2000*k2000)+(1000*k1000)+(500*k500)
+
+	alert(
+		'kembalian : '+ '\n20.000 sebanyak '+k20000+ '\n10.000 sebanyak '+k10000+ '\n5.000 sebanyak '+k5000+ '\n2.000 sebanyak '+k2000+ '\n1.000 sebanyak '+k1000+ '\n500 sebanyak '+k500+'\n total ' + String(total_kembalian)
+	)
+
+
+
+</script>
+</body>
+</html>

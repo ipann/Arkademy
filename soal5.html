@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 5</title>
+</head>
+<body>
+
+<table id='dw'></table>
+
+<script>
+	pola = [
+	[1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+	[1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+	[1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1],
+	[1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
+	[1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1],
+	[1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+];
+
+var isiDW = ''
+for (x of pola) {
+	isiDW +='<tr>'
+	for (y of x) {
+		isiDW +=  y == 1 ? '<td width="">DW</td>' : '<td width="25"></td>';
+	}
+	isiDW +='</tr>'
+} 
+var dw = document.getElementById('dw')
+dw.innerHTML = isiDW
+
+</script>
+</body>
+</html>

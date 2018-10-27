@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 2</title>
+</head>
+<body>
+
+	<form action="">
+		
+		<div>
+			<label for=""> Username :
+			<input type="text" placeholder="Hanya Huruf Kecil"  id="username">
+			</label>
+		</div>
+		<br>
+		<div>
+			<label for=""> Email :
+				<input type="email"  id="email"> harus menganndung @ dan huruf kecil semua
+			</label>
+		</div>
+		<br>
+		<div>
+			<label for=""> Phone Number
+				<input type="text"  id="phoneNumber">tidak boleh menggunakan symbol kecuali +
+
+			</label>
+		</div>
+
+		<button type="submit"> Kirim</button>
+	</form>
+
+<script type="text/javascript">
+	var username = document.getElementById('username')
+	username.addEventListener('keyup', function (e) {
+		console.log(e)
+		 username.value = username.value.replace(/[^a-z\.]+/g, '')
+	})
+
+	var email = document.getElementById('email')
+	email.addEventListener('keyup', function (e) {
+		console.log(e)
+		 email.value = email.value.replace(/[^a-z@.]+/g, '')
+	})	
+
+
+	var dphoneNumber = document.getElementById('phoneNumber')
+	phoneNumber.addEventListener('keyup', function (e) {
+		console.log(e)
+		 phoneNumber.value = phoneNumber.value.replace(/[^0-9_+ \.]+/g, '')
+	})	
+
+
+</script>
+</body>
+</html>
